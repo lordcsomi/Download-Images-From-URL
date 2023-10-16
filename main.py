@@ -5,7 +5,7 @@ from PIL import Image
 from io import BytesIO
 
 
-URL = "https://kisnaplo.karinthy.hu/app/interface.php?view=v_download_photo&target=PLWS{}.jpg&type=order&KSNPLSID=ndmqcnsi0uass2cqk1qt6vgv47&KSNPLSID=ndmqcnsi0uass2cqk1qt6vgv47"
+URL = "https://random/url/interesting{}.jpg"
 DOWNLOADE_PATH = "images"
 TRASHOLD = 2000 # 2KB
 START = 0
