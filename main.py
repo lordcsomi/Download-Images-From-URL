@@ -4,10 +4,12 @@ import asyncio
 from PIL import Image
 from io import BytesIO
 
-# URL template
+
 URL = "https://kisnaplo.karinthy.hu/app/interface.php?view=v_download_photo&target=PLWS{}.jpg&type=order&KSNPLSID=ndmqcnsi0uass2cqk1qt6vgv47&KSNPLSID=ndmqcnsi0uass2cqk1qt6vgv47"
 DOWNLOADE_PATH = "images"
 TRASHOLD = 2000 # 2KB
+START = 0
+END = 5000
 
 async def download_image(session, i):
     url = URL.format(i)
@@ -36,7 +38,7 @@ async def main():
     
     async with aiohttp.ClientSession() as session:
         # Loop through numbers 0-5000
-        for i in range(5001):
+        for i in range(START, END):
             await download_image(session, i)
 
     print("Download complete.")
