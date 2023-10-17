@@ -27,7 +27,7 @@ This script allows you to download images from a specific URL template and valid
         ```
  5. Install the required Python packages using pip:
     ```bash
-    pip install aiohttp pillow
+    pip install aiohttp pillow logging
     ```
  6. Customize the script:
     - Set the `URL` variable to your specific image URL template. In the `URL` place a `{}` where you want the loop
@@ -40,6 +40,17 @@ This script allows you to download images from a specific URL template and valid
   python main.py
   ```
   The script will download images to the specified download path and validate their integrity. It will print messages indicating the download status.
+
+# Version:
+  - 1
+    - working sub parts
+  - 2
+    - Initial release
+  - 3
+    - Added logging
+    - Added statistics
+    - Updated console output
+    - Added script that trys to download the failed images again
 
 # Made by Csomi
 That's it! You have successfully installed and run the image downloader script. Enjoy downloading your images!
